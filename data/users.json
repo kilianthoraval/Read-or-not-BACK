@@ -1,0 +1,26 @@
+[
+    {
+        "firsname": "kilian",
+        "lastname": "thoraval",
+        "email": "kiki@oclock.com",
+        "password": "kiki"
+    },
+    {
+        "firsname": "mickael",
+        "lastname": "mallet",
+        "email": "mimi@oclock.com",
+        "password": "mimi"
+    },
+    {
+        "firsname": "jean marie",
+        "lastname": "lapernat",
+        "email": "jeanjean@oclock.com",
+        "password": "jeanjean"
+    },
+    {
+        "firsname": "whitney",
+        "lastname": "toniolo",
+        "email": "wiwi@oclock.com",
+        "password": "wiwi"
+    }
+]

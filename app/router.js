@@ -3,8 +3,8 @@ const router = express.Router();
 const bookController = require("./controller/bookController.js");
 const searchController = require("./controller/searchController.js");
 
-router.get("/books",bookController.getAllBooks);
-router.get("/book/:id",bookController.getPost);
+router.get("/books",bookController.getBooks);
+router.get("/book/:id",bookController.getBook);
 
 router.get("/author/:id",searchController.findAuthor);
 router.get("/category/:id",searchController.findCategory);
