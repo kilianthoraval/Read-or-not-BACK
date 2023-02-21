@@ -6,8 +6,8 @@ const searchController = require("./controller/searchController.js");
 router.get("/books",bookController.getBooks);
 router.get("/book/:id",bookController.getBook);
 
-router.get("/author/:id",searchController.findAuthor);
-router.get("/category/:id",searchController.findCategory);
+// router.get("/author/:id",searchController.findAuthor);
+// router.get("/category/:id",searchController.findCategory);
 
 
 module.exports = router;

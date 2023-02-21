@@ -2,17 +2,19 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const session = require('express-session')
-const router = require('./app/router')
-
+const router = require('./app/router.js')
 const app = express();
+app.use(express.urlencoded({extended:true}));
+
+app.use(express.json());
+
+app.use(router);
+
 
 // on ajoute un middleware, ici avec les options par défaut, n'importe quel domaine pourra interroger notre API
 // voir la doc et les options si on veut être plus restrictif
 app.use(cors())
 
-/* Mise en place des sessions */
-const sessionMiddleware = session(sessionConfig);
-app.use(sessionMiddleware);
 
 /* Configuration des sessions */
 const sessionConfig = {
@@ -25,14 +27,10 @@ const sessionConfig = {
 	},
 };
 
-// Note: pensez qu'on va faire des routes POST ! (donc avec des body ...)
-// pour avoir accès aux body en POST on a beosoin d'un body-parser
-// ce middleware nous mets à disposition la clé ".body" dans l'objet "request"
-app.use(express.urlencoded({extended:true}));
-// on informe express que le contenu du body sera du json
-app.use(express.json());
 
-app.use(router);
+/* Mise en place des sessions */
+const sessionMiddleware = session(sessionConfig);
+app.use(sessionMiddleware);
 
 const PORT = process.env.PORT || 3000;
 

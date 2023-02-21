@@ -19,7 +19,6 @@ const securityService = {
     },
     checkToken(req, res, next) {
         try {
-            //console.log(req.headers.authorization.split(" ")[1]);
             const token = req.headers.authorization.split(" ")[1];
             const user = jwt.verify(token, process.env.SESSION_SECRET);
             console.log("token validé !", user);
