@@ -8,7 +8,8 @@ CREATE DOMAIN valid_mail AS text CHECK(
 
 CREATE TABLE "user" (
     id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name text NOT NULL UNIQUE,
+    firstname text NOT NULL UNIQUE,
+    lastname text NOT NULL UNIQUE,
     email valid_mail NOT NULL UNIQUE,
     password text NOT NULL UNIQUE
 );

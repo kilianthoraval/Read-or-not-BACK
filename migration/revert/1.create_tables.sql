@@ -2,6 +2,7 @@
 
 BEGIN;
 
-DROP TABLE user,category,author,book,library CASCADE;
+DROP TABLE "user",category,author,book,"library" CASCADE;
+DROP DOMAIN valid_mail;
 
 COMMIT;
