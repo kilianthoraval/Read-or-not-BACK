@@ -14,14 +14,15 @@ async function insertBooks(){
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
     for(const data of booksData){
-        const sqlQuery = `INSERT INTO ${tableName} (title,author_id,category_id,description) VALUES ('${data.title}','${data.author_id}','${data.category_id}','${data.description}');`;
-        await client.query(sqlQuery);
+        const sqlQuery = `INSERT INTO ${tableName} (id,title,author_id,category_id,description) VALUES ($1,$2,$3,$4,$5);`;
+        const values = [data.id,data.title,data.author,data.category,data.description];
+        await client.query(sqlQuery,values);
         console.log(sqlQuery);
     }    
 };
 
 async function insertUsers(){
-    const tableName = "user";
+    const tableName = "users";
 
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
@@ -39,8 +40,9 @@ async function insertAuthor(){
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
     for(const data of authorData){
-        const sqlQuery = `INSERT INTO ${tableName} (firstname,lastname) VALUES ('${data.firstname}','${data.lastname}');`;
-        await client.query(sqlQuery);
+        const sqlQuery = `INSERT INTO ${tableName} (id,firstname,lastname) VALUES ($1,$2,$3);`;
+        const values = [data.id,data.firstname,data.lastname];
+        await client.query(sqlQuery,values);
         console.log(sqlQuery);
     }    
 };
@@ -51,8 +53,9 @@ async function insertCategory(){
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
     for(const data of categoryData){
-        const sqlQuery = `INSERT INTO ${tableName} (name) VALUES ('${data.name}');`;
-        await client.query(sqlQuery);
+        const sqlQuery = `INSERT INTO ${tableName} (id,name) VALUES ($1,$2);`;
+        const values = [data.id,data.name];
+        await client.query(sqlQuery,values);
         console.log(sqlQuery);
     }    
 };
@@ -60,10 +63,10 @@ async function insertCategory(){
 
 
 (async ()=>{
-    await client.connect();
-    await insertBooks();
+    await client.connect();    
     await insertUsers();
     await insertAuthor();
     await insertCategory();
+    await insertBooks();
     await client.end();
 })();

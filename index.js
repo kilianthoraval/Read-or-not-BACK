@@ -8,7 +8,6 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(express.json());
 
-app.use(router);
 
 
 // on ajoute un middleware, ici avec les options par défaut, n'importe quel domaine pourra interroger notre API
@@ -31,6 +30,8 @@ const sessionConfig = {
 /* Mise en place des sessions */
 const sessionMiddleware = session(sessionConfig);
 app.use(sessionMiddleware);
+
+app.use(router);
 
 const PORT = process.env.PORT || 3000;
 

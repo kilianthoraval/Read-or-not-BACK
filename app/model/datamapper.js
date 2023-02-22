@@ -25,6 +25,19 @@ const books = {
             console.error(error);
             return null;
         }
+    },
+    async getUserByEmail(email) {
+       const sqlQuery = 'SELECT * FROM users = $1' 
+       try {
+        const values = [email]
+        const response = await client.query(sqlQuery,values);
+
+        return response.rows[0];
+        }
+        catch (error) {
+            console.error(error);
+            return null;
+        }
     }
 }
 
