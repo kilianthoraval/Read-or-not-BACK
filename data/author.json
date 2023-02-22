@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "firstname": "George",
+        "lastname": "Orwell"
+    },
+    {
+        "id": 2,
+        "firstname": "J.R.R.",
+        "lastname": "Tolkien"
+    },
+    {
+        "id": 3,
+        "firstname": "Umberto",
+        "lastname": "Eco"
+    },
+    {
+        "id": 4,
+        "firstname": "Frank",
+        "lastname": "Herbert"
+    },
+    {
+        "id": 5,
+        "firstname": "J.K.",
+        "lastname": "Rowling"
+    },
+    {
+        "id": 6,
+        "firstname": "Victor",
+        "lastname": "Hugo"
+    },
+    {
+        "id": 7,
+        "firstname": "Alexandra",
+        "lastname": "Dumas"
+    }
+]

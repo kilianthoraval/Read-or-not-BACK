@@ -2,56 +2,56 @@
 {
     "id": 1,
     "title": "1984",
-    "author": "George Orwell",
-    "category": "Science-fiction",
+    "author": 1,
+    "category": 1,
     "description": "Dans un futur totalitaire, un homme se rebelle contre le système de surveillance et de contrôle de l'État.",
     "image_couverture": "https://example.com/images/1984.jpg"
   },
   {
     "id": 2,
     "title": "Le Seigneur des anneaux : La Communauté de l'anneau",
-    "author": "J.R.R. Tolkien",
-    "category": "Fantasy",
+    "author": 2,
+    "category": 2,
     "description": "Un jeune hobbit est chargé de détruire un anneau magique avant qu'il ne tombe entre les mains du Seigneur des Ténèbres.",
     "image_couverture": "https://example.com/images/lotr1.jpg"
   },
   {
     "id": 3,
     "title": "Le Nom de la rose",
-    "author": "Umberto Eco",
-    "category": "Roman policier",
+    "author": 3,
+    "category": 3,
     "description": "Au XIVe siècle, un moine franciscain enquête sur une série de meurtres commis dans une abbaye italienne.",
     "image_couverture": "https://example.com/images/nom-de-la-rose.jpg"
   },
   {
     "id": 4,
     "title": "Le Cycle de Dune : Dune",
-    "author": "Frank Herbert",
-    "category": "Science-fiction",
+    "author": 4,
+    "category": 1,
     "description": "Sur la planète désertique d'Arrakis, la famille Atreides lutte pour le contrôle de l'épice, une substance vitale pour la navigation spatiale.",
     "image_couverture": "https://example.com/images/dune.jpg"
   },
   {
     "id": 5,
     "title": "Harry Potter à l'école des sorciers",
-    "author": "J.K. Rowling",
-    "category": "Fantasy",
+    "author": 5,
+    "category": 2,
     "description": "Un jeune garçon découvre qu'il est un sorcier et intègre une école de magie.",
     "image_couverture": "https://example.com/images/hp1.jpg"
   },
   {
     "id": 6,
     "title": "Les Misérables",
-    "author": "Victor Hugo",
-    "category": "Roman historique",
+    "author": 6,
+    "category": 4,
     "description": "L'histoire d'un ancien bagnard et de sa lutte pour la rédemption dans la France du XIXe siècle.",
     "image_couverture": "https://example.com/images/les-miserables.jpg"
   },
   {
     "id": 7,
     "title": "Le Comte de Monte-Cristo",
-    "author": "Alexandre Dumas",
-    "category": "Roman d'aventures",
+    "author": 7,
+    "category": 5,
     "description": "Un jeune marin est emprisonné à tort et cherche à se venger de ceux qui l'on piégé",
     "image_couverture": "https://example.com/images/les-miserables.jpg"
 }

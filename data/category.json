@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Science-fiction"
+    },
+    {
+        "id": 2,
+        "name": "Fantasy"
+    },
+    {
+        "id": 3,
+        "name": "Roman policier"
+    },
+    {
+        "id": 4,
+        "name": "Roman historique"
+    },
+    {
+        "id": 5,
+        "name": "Roman d'aventures"
+    }
+]
