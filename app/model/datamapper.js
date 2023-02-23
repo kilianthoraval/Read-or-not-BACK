@@ -2,7 +2,7 @@ const client = require("../service/dbClient");
 
 const books = {
     async getAllBooks() {
-        const sqlQuery = "SELECT * FROM books;";
+        const sqlQuery = "SELECT * FROM book;";
         try {
             const response = await client.query(sqlQuery);
 
@@ -14,7 +14,7 @@ const books = {
         }
     },
     async getBookById(bookID) {
-        const sqlQuery = `SELECT * FROM books WHERE id = ${bookID};`;
+        const sqlQuery = `SELECT * FROM book WHERE id = ${bookID};`;
 
         try {
             const response = await client.query(sqlQuery);

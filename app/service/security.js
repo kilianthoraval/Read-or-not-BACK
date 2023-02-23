@@ -32,11 +32,8 @@ const securityService = {
         }
     },
     async checkLogin(req,res){
-        // on génère une instance de User à partir de req.body qui contient username et password
         const user = new User(req.body);
-        
-        // on appelle la méthode qui va vérifier les infos en BDD et rempli les informations de notre user
-        // la méthode renvoie true ou false suivant si les informations username/password sont correctes
+
         const dbUser = await datamapper.getUserByEmail(user.email);
         if(dbUser){
             console.log(user);
