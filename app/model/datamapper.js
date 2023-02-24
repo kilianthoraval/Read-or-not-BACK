@@ -70,7 +70,7 @@ const category = {
 
 const users = {
     async getAllUsers() {
-        const sqlQuery = "SELECT * FROM user;";
+        const sqlQuery = "SELECT * FROM users;";
         try {
             const response = await client.query(sqlQuery);
 
@@ -93,6 +93,9 @@ const users = {
              console.error(error);
              return null;
          }
+     },
+     async insertUser(){
+        
      }
 };
 
