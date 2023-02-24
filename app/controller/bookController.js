@@ -3,7 +3,7 @@ const dataMapper = require("../model/datamapper");
 
 const bookController = {
     async getBooks(req,res){   
-        const allBooks = await dataMapper.getAllBooks();
+        const allBooks = await dataMapper.books.getAllBooks();
 
         if (allBooks) {
             res.json(allBooks);
@@ -14,7 +14,7 @@ const bookController = {
     },
     async getBook(req,res){
         const bookID = req.params.id;
-        const book = await dataMapper.getBookById(bookID);
+        const book = await dataMapper.books.getBookById(bookID);
         if (book){
             res.json(book[0]);
         }
