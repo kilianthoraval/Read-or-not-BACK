@@ -2,8 +2,8 @@ const dataMapper = require("../model/datamapper");
 
 const searchController = {
     async getAuthor(req,res){
-        const authorID = req.params.id;
-        const author = await dataMapper.getAuthorById(authorID);
+        const authorName = req.params.id;
+        const author = await dataMapper.author.getAuthorByName(authorName);
         if (author){
             res.json(author[0]);
         }
@@ -12,9 +12,10 @@ const searchController = {
             res.json("500");
         }         
     },
+
     async getCategory(req,res){
-        const categoryID = req.params.id;
-        const category = await dataMapper.getCategoryById(categoryID);
+        const categoryName = req.params.id;
+        const category = await dataMapper.category.getCategoryByName(categoryName);
         if (category){
             res.json(category[0]);
         }

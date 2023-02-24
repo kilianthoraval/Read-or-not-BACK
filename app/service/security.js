@@ -27,16 +27,20 @@ const securityService = {
             next();
         }
         catch (error) {
-            console.log(error);
-            next(error);
+            // console.log(error);
+            // next(error);
+            res.status(401);
+            res.json()
         }
     },
     async checkLogin(req,res){
         const user = new User(req.body);
-
-        const dbUser = await datamapper.getUserByEmail(user.email);
+        console.log(user);
+        const dbUser = await datamapper.users.getUserByEmail(user.email);
+        console.log(dbUser);
         if(dbUser){
             console.log(user);
+            console.log(dbUser.password);
             if(dbUser['password'] == user.password){
                  // Génération du token
                 const token = jwt.sign({username:user.email}, process.env.SESSION_SECRET);
@@ -50,6 +54,7 @@ const securityService = {
                 })
             }
             else{
+                console.log("mauvais password");
                     // erreur dans le couple username/password, on renvoie false au client
                 res.status(500).json({
                     error:"ceci n'est pas correct!"
