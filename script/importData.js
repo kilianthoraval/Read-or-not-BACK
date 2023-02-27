@@ -14,8 +14,8 @@ async function insertBooks(){
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
     for(const data of booksData){
-        const sqlQuery = `INSERT INTO ${tableName} (id,title,author_id,category_id,description) VALUES ($1,$2,$3,$4,$5);`;
-        const values = [data.id,data.title,data.author,data.category,data.description];
+        const sqlQuery = `INSERT INTO ${tableName} (id,title,author_id,category_id,description,img) VALUES ($1,$2,$3,$4,$5,$6);`;
+        const values = [data.id,data.title,data.author,data.category,data.description,data.img];
         await client.query(sqlQuery,values);
         console.log(sqlQuery);
     }    

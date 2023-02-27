@@ -33,5 +33,21 @@
         "id": 7,
         "firstname": "Alexandre",
         "lastname": "Dumas"
+    },
+    {
+        "id": 8,
+        "firstname": "F. Scott",
+        "lastname": "Fitzgerald"
+    },
+    {
+        "id": 9,
+        "firstname": "Harper",
+        "lastname": "Lee"
+    },
+     {
+        "id": 10,
+        "firstname": "Herman",
+        "lastname": "Melville"
     }
+
 ]

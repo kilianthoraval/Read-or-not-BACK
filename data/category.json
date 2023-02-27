@@ -18,5 +18,13 @@
     {
         "id": 5,
         "name": "Roman d'aventures"
+    },
+    {
+        "id": 6,
+        "name": "Roman"
+    },
+    {
+        "id": 7,
+        "name": "Fiction"
     }
 ]

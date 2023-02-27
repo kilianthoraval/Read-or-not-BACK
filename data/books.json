@@ -5,7 +5,7 @@
     "author": 1,
     "category": 1,
     "description": "Dans un futur totalitaire, un homme se rebelle contre le système de surveillance et de contrôle de l'État.",
-    "image_couverture": "https://example.com/images/1984.jpg"
+    "img": "https://images.app.goo.gl/VGgY4BsgQouwWSLf6"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "author": 2,
     "category": 2,
     "description": "Un jeune hobbit est chargé de détruire un anneau magique avant qu'il ne tombe entre les mains du Seigneur des Ténèbres.",
-    "image_couverture": "https://example.com/images/lotr1.jpg"
+    "img": "https://images.app.goo.gl/KGu8zuiBktqYfwQX6"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "author": 3,
     "category": 3,
     "description": "Au XIVe siècle, un moine franciscain enquête sur une série de meurtres commis dans une abbaye italienne.",
-    "image_couverture": "https://example.com/images/nom-de-la-rose.jpg"
+    "img": "https://images.app.goo.gl/1RsvhztSTLkdSxFD6"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "author": 4,
     "category": 1,
     "description": "Sur la planète désertique d'Arrakis, la famille Atreides lutte pour le contrôle de l'épice, une substance vitale pour la navigation spatiale.",
-    "image_couverture": "https://example.com/images/dune.jpg"
+    "img": "https://images.app.goo.gl/WdThF9wQ1cff2Tas5"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "author": 5,
     "category": 2,
     "description": "Un jeune garçon découvre qu'il est un sorcier et intègre une école de magie.",
-    "image_couverture": "https://example.com/images/hp1.jpg"
+    "img": "https://images.app.goo.gl/L5ZNQWNgQp342jrv8"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "author": 6,
     "category": 4,
     "description": "L'histoire d'un ancien bagnard et de sa lutte pour la rédemption dans la France du XIXe siècle.",
-    "image_couverture": "https://example.com/images/les-miserables.jpg"
+    "img": "https://images.app.goo.gl/BFTX5kLXyKXx6c167"
   },
   {
     "id": 7,
@@ -53,6 +53,30 @@
     "author": 7,
     "category": 5,
     "description": "Un jeune marin est emprisonné à tort et cherche à se venger de ceux qui l'on piégé",
-    "image_couverture": "https://example.com/images/les-miserables.jpg"
-}
+    "img": "https://images.app.goo.gl/zYU6ttAADv4axce8A"
+  },
+  {
+    "id": 8,
+    "title": "The Great Gatsby",
+    "author": 8,
+    "category": 6,
+    "description": "Le magnat de la finance Jay Gatsby tente de reconquérir son ancienne petite amie Daisy Buchanan",
+    "img": "https://images.app.goo.gl/BgzondZtqkq7pcZH9"
+  },
+  {
+    "id": 9,
+    "title": "To Kill a Mockingbird",
+    "author": 9,
+    "category": 6,
+    "description": "L'avocat Atticus Finch défend un homme noir accusé de viol dans une petite ville de l'Alabama",
+    "img": "https://images.app.goo.gl/HpPHSreRoD3XvQq69"
+  },
+  {
+    "id": 10,
+    "title": "Moby-Dick",
+    "author": 10,
+    "category": 7,
+    "description": "The story of a sailor's obsession with a giant white whale.",
+    "img": "https://images.app.goo.gl/KkrJNFD6F38D7mmd9"
+  }
 ]

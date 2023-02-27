@@ -30,7 +30,8 @@ CREATE TABLE book (
     title text NOT NULL,
     author_id int NOT NULL REFERENCES author(id),
     category_id int NOT NULL REFERENCES category(id),
-    description text NOT NULL 
+    description text NOT NULL,
+    img BYTEA NOT NULL
 );
 
 CREATE TABLE "library" (
