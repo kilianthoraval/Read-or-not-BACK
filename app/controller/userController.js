@@ -15,8 +15,8 @@ const userController = {
     },
 
     async createUser(req, res) {
-        const { pseudo, email, password, confirmation } = req.body;
-        if (!email || !password || !confirmation || password !== confirmation) throw new Error('données invalides');
+        const { pseudo, email, password } = req.body;
+        // if (!email || !password || !confirmation || password !== confirmation) throw new Error('données invalides');
         
         try {
             const user = await datamapper.insertUser({ pseudo, email, password });
