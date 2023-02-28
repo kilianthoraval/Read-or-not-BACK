@@ -8,7 +8,7 @@ const security = require("./service/security");
 router.get("/books",bookController.getBooks);
 router.get("/book/:id",bookController.getBook);
 
-router.post("/createuser",userController.createUser)
+router.post("/signup",userController.createUser)
 router.post("/login",security.checkLogin)
 router.get("/users",security.checkToken,userController.getUsers)
 
