@@ -14,7 +14,10 @@ const books = {
         }
     },
     async getBookById(bookID) {
-        const sqlQuery = `SELECT * FROM book WHERE id = ${bookID};`;
+        const sqlQuery = `SELECT id,title,description,img, 
+        (SELECT json_build_object('id',id,'firstname',firstname,'lastname',lastname)AS author FROM author WHERE id = author_id), 
+        (SELECT json_build_object('id',id,'name',name)AS category FROM category WHERE id = category_id)
+         FROM book WHERE id = ${bookID};`;
 
         try {
             const response = await client.query(sqlQuery);
