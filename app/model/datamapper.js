@@ -93,9 +93,18 @@ const users = {
              console.error(error);
              return null;
          }
-     },
-     async insertUser(){
-        
+    },
+     async insertUser(user){
+        const sqlQuery = "INSERT INTO users (firstname,lastname,email,password) VALUES ($1,$2,$3,$4) RETURNING *;";
+        const values = [user.firstname,user.lastname,user.email,user.password];
+        try {
+            const response = await client.query(sqlQuery,values);
+            result = response.rows[0];
+        }
+        catch (error) {
+            console.error("PG",error);
+        }
+        return result;
      }
 };
 

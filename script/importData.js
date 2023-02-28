@@ -27,8 +27,8 @@ async function insertUsers(){
     await client.query(`TRUNCATE ${tableName} CASCADE;`);
 
     for(const data of usersData){
-        const sqlQuery = `INSERT INTO ${tableName} (firstname,lastname,email,password) VALUES ($1,$2,$3,$4);`;
-        const values = [data.firstname, data.lastname, data.email, data.password];
+        const sqlQuery = `INSERT INTO ${tableName} (pseudo,email,password) VALUES ($1,$2,$3);`;
+        const values = [data.pseudo, data.email, data.password];
         await client.query(sqlQuery,values);
         console.log(sqlQuery);
     }    

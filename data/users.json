@@ -1,25 +1,21 @@
 [
     {
-        "firstname": "kilian",
-        "lastname": "thoraval",
+        "pseudo": "kiki",
         "email": "kiki@oclock.com",
         "password": "kiki"
     },
     {
-        "firstname": "mickael",
-        "lastname": "mallet",
+        "pseudo": "mimi",
         "email": "mimi@oclock.com",
         "password": "mimi"
     },
     {
-        "firstname": "jean marie",
-        "lastname": "lapernat",
+        "pseudo": "jeanjean",
         "email": "jeanjean@oclock.com",
         "password": "jeanjean"
     },
     {
-        "firstname": "whitney",
-        "lastname": "toniolo",
+        "pseudo": "wiwi",
         "email": "wiwi@oclock.com",
         "password": "wiwi"
     }
