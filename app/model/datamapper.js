@@ -95,8 +95,8 @@ const users = {
          }
     },
      async insertUser(user){
-        const sqlQuery = "INSERT INTO users (firstname,lastname,email,password) VALUES ($1,$2,$3,$4) RETURNING *;";
-        const values = [user.firstname,user.lastname,user.email,user.password];
+        const sqlQuery = "INSERT INTO users (pseudo,email,password) VALUES ($1,$2,$3) RETURNING *;";
+        const values = [user.pseudo,user.email,user.password];
         try {
             const response = await client.query(sqlQuery,values);
             result = response.rows[0];
