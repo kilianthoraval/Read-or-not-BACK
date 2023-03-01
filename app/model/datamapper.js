@@ -111,5 +111,17 @@ const users = {
      }
 };
 
+const library = {
+    async userBooks(){
 
-module.exports = { books,author,users,category };
+    },
+    async newUserBook(){
+
+    },
+    async deleteUserBook(){
+
+    }
+};
+
+
+module.exports = { books,author,users,category,library };
