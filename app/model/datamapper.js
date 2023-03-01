@@ -31,7 +31,6 @@ const books = {
     }
 };
 
-
 const author = {
     async getAuthorByName(authorName) {
         const sqlQuery = `SELECT * FROM book
@@ -112,12 +111,15 @@ const users = {
 };
 
 const library = {
+    //récuperer l'ensemble des livres d'un utilisateur avec ( user_id )
     async userBooks(){
 
     },
+    //Ajouter un livre avec ( book_id ) dans la bibliothèque d'un utilisateur avec ( user_id )
     async newUserBook(){
 
     },
+    //Supprimer un livre avec l'id ( book_id ) dans la bibliothèque d'un utilisateur ( user_id )
     async deleteUserBook(){
 
     }
