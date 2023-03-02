@@ -111,13 +111,18 @@ const users = {
 };
 
 const library = {
-    //récuperer l'ensemble des livres d'un utilisateur avec ( user_id )
+    //récuperer l'ensemble des livres d'un utilisateur avec ( user_id ) AGG
     async userBooks(){
+        const sqlQuery = `SELECT * FROM book
+        JOIN library ON library.book_id = book.id
+        WHERE library.user_id = user.id`;
 
     },
     //Ajouter un livre avec ( book_id ) dans la bibliothèque d'un utilisateur avec ( user_id )
     async newUserBook(){
-
+        const sqlQuery = `INSERT INTO library (book_id, user_id) VALUES ($1,$2) 
+        JOIN book ON book.id = library.book_id
+        WHERE book_id = book.id`;
     },
     //Supprimer un livre avec l'id ( book_id ) dans la bibliothèque d'un utilisateur ( user_id )
     async deleteUserBook(){
