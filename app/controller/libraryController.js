@@ -12,10 +12,24 @@ const libraryController = {
         }
     },
     async addBookToUserLibrary(req,res){
-
+        const book = req.body;
+        const addBook = await dataMapper.library.newUserBook(book);
+        if (addBook){
+            res.status(200).json({})
+        }
+        else {
+            res.json("500");
+        }
     },
     async removeBookFromUserLibrary(req,res){
+        const result = await dataMapper.library.deleteUserBook(req.params.id);
 
+        if (result) {
+            res.json(result);
+        }
+        else {
+            res.json("500");
+        }
     }
 };
 

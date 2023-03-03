@@ -1,4 +1,5 @@
 const dataMapper = require("../model/datamapper");
+const bcrypt = require('bcrypt');
 const User =require('../model/user');
 
 const userController = {
@@ -15,12 +16,13 @@ const userController = {
     },
 
     async createUser(req,res) {
+        const encryptedPassword = await bcrypt.hash(password, 10);
         const { pseudo, email, password } = req.body;
         console.log(pseudo,email,password);
         // if (!email || !password || !confirmation || password !== confirmation) throw new Error('données invalides');
         
         try {
-            const user = await dataMapper.users.insertUser({ pseudo, email, password });
+            const user = await dataMapper.users.insertUser({ pseudo, email, password: encryptedPassword });
             console.log(user);
             return res.json(user);
             }

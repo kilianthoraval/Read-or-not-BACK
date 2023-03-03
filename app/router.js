@@ -15,10 +15,15 @@ router.get("/users",security.checkToken,userController.getUsers);
 
 router.get("/author/:id",searchController.getAuthor);
 router.get("/category/:id",searchController.getCategory);
+router.get("/search",searchController.getInputSearch);
+// router.get("/authors",)
+// router.get("/categories",)
+// router.get("/book/authors/:id_author",)
+// router.get("/book/categories/:id_category",)
 
 
-router.get("/users/:id/books",security.checkToken,libraryController.getUserLibrary)
-router.post("/users/:id/book/:id",security.checkToken,libraryController.addBookToUserLibrary)
-router.delete("/users/:id/book/:id",security.checkToken,libraryController.removeBookFromUserLibrary)
+router.get("/users/:id_user/books",security.checkToken,libraryController.getUserLibrary)
+router.post("/users/:id_user/book/:id_book",security.checkToken,libraryController.addBookToUserLibrary)
+router.delete("/users/:id_user/book/:id_book",security.checkToken,libraryController.removeBookFromUserLibrary)
 
 module.exports = router;

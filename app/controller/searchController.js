@@ -23,6 +23,18 @@ const searchController = {
             console.log("genre introuvable");
             res.json("500");
         }         
+    },
+
+    async getInputSearch(req,res){
+        const userSearch = req.query.inputsearch;
+        console.log(userSearch);
+        const result = await dataMapper.search.inputSearch(userSearch);
+        if (result){
+            res.json(result)
+        }
+        else {
+            res.json({})
+        }
     }
 };
 
