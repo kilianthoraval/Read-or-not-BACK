@@ -1,3 +1,4 @@
+// Création d'un nouvel utilisateur
 class User {
     constructor(obj)
     {

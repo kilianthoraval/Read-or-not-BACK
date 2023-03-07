@@ -3,6 +3,11 @@ const bcrypt = require('bcrypt');
 const User =require('../model/user');
 
 const userController = {
+    /**
+     * Méthode de récupération des utilisateurs
+     * @param {*} req 
+     * @param {*} res 
+     */
     async getUsers(req,res){   
         const allUsers = await dataMapper.users.getAllUsers();
 
@@ -12,9 +17,14 @@ const userController = {
         else {
             res.json("500");
         }
-    console.log('coucou');
     },
 
+    /**
+     * Méthode pour la création d'un utilisateur
+     * @param {*} req 
+     * @param {*} res 
+     * @returns 
+     */
     async createUser(req,res) {
         // const encryptedPassword = await bcrypt.hash(password, 10);
         const { pseudo, email, password } = req.body;

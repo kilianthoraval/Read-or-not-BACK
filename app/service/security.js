@@ -20,6 +20,12 @@ const securityService = {
             res.redirect("/");
         }
     },
+    /**
+     * Vérification du token de l'utilisateur
+     * @param {*} req 
+     * @param {*} res 
+     * @param {*} next 
+     */
     checkToken(req, res, next) {
         try {
             const token = req.headers.authorization.split(" ")[1];
@@ -28,12 +34,15 @@ const securityService = {
             next();
         }
         catch (error) {
-            // console.log(error);
-            // next(error);
             res.status(401);
             res.json()
         }
     },
+    /**
+     * Création d'un token à la connection de l'utilisateur
+     * @param {*} req 
+     * @param {*} res 
+     */
     async checkLogin(req,res){
         const user = new User(req.body);
         console.log(user);

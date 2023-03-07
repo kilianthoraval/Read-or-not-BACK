@@ -1,7 +1,11 @@
 const client = require("../service/dbClient");
 
-const books = {
-    async getAllBooks() {
+const books = {  
+    /**
+    * Permet de récuperer la totalité des livres de la BDD
+    * @returns récupération des livres
+    */
+    async getAllBooks() {        
         const sqlQuery = "SELECT * FROM book;";
         try {
             const response = await client.query(sqlQuery);
@@ -13,6 +17,12 @@ const books = {
             return null;
         }
     },
+    
+    /**
+     * récupération d'un livre par son ID
+     * @param {*} bookID 
+     * @returns 
+     */
     async getBookById(bookID) {
         const sqlQuery = `SELECT id,title,description,img, 
         (SELECT json_build_object('id',id,'firstname',firstname,'lastname',lastname)AS author FROM author WHERE id = author_id), 
@@ -32,6 +42,11 @@ const books = {
 };
 
 const author = {
+    /**
+     * Récupération d'un auteur par son nom et son prénom
+     * @param {*} authorName 
+     * @returns 
+     */
     async getAuthorByName(authorName) {
         const sqlQuery = `SELECT * FROM book
         JOIN author ON author_id = author.id
@@ -52,6 +67,11 @@ const author = {
 };
 
 const category = {
+    /**
+     * Récupération d'un genre de livre
+     * @param {*} categoryName 
+     * @returns 
+     */
     async getCategoryByName(categoryName) {
         const sqlQuery = `SELECT * FROM book
         JOIN category ON category_id = category.id
@@ -71,6 +91,10 @@ const category = {
 };
 
 const users = {
+    /**
+     * Récupération des utilisateurs en BDD
+     * @returns 
+     */
     async getAllUsers() {
         const sqlQuery = "SELECT * FROM users;";
         try {
@@ -83,6 +107,12 @@ const users = {
             return null;
         }
     },
+
+    /**
+     * Récupération de l'email d'un utilisateur
+     * @param {*} email 
+     * @returns 
+     */
     async getUserByEmail(email) {
         const sqlQuery = 'SELECT * FROM users WHERE email = $1' 
         try {
@@ -96,6 +126,12 @@ const users = {
              return null;
          }
     },
+
+    /**
+     * Insertion d'un utilisateur en BDD
+     * @param {*} user 
+     * @returns 
+     */
      async insertUser(user){
         const sqlQuery = "INSERT INTO users (pseudo,email,password) VALUES ($1,$2,$3) RETURNING *;";
         const values = [user.pseudo,user.email,user.password];
@@ -110,8 +146,11 @@ const users = {
      }
 };
 
-const library = {
-    //récuperer l'ensemble des livres d'un utilisateur avec ( user_id ) AGG
+const library = { 
+    /**
+     * Récupération des livres d'un utilisateur
+     * @returns 
+     */
     async userBooks(){
         const sqlQuery = `SELECT book.*,readornot,comment,rate FROM book
         JOIN library ON library.book_id = book.id
@@ -126,7 +165,13 @@ const library = {
             return null;
         }
     },
-    //Ajouter un livre avec ( book_id ) dans la bibliothèque d'un utilisateur avec ( user_id )
+
+    /**
+     * Insertion d'un livre choisi par l'utilisateur
+     * @param {*} bookId 
+     * @param {*} userId 
+     * @returns 
+     */
     async newUserBook(bookId, userId){
         const sqlQuery = `INSERT INTO library (book_id, user_id) VALUES ($1,$2) `;
         try {
@@ -140,7 +185,13 @@ const library = {
             return null;
         }
     },
-    //Supprimer un livre avec l'id ( book_id ) dans la bibliothèque d'un utilisateur ( user_id )
+
+    /**
+     * Suppression d'un livre choisi par l'utilisateur
+     * @param {*} userId 
+     * @param {*} bookId 
+     * @returns 
+     */
     async deleteUserBook(userId, bookId){
         const sqlQuery = `DELETE FROM library WHERE user_id = $1 AND book_id = $2`;
         try {
@@ -157,6 +208,11 @@ const library = {
 };
 
 const search = {
+    /**
+     * Moteur de recherche pour trouver un livre par son auteur, son genre ou son titre
+     * @param {*} search 
+     * @returns 
+     */
     async inputSearch(search){
         const sqlQuery = `SELECT book.id, book.title, book.description, book.img, category.name, author.firstname, author.lastname FROM book
         JOIN author ON author_id = author.id

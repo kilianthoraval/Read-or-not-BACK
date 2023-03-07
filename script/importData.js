@@ -5,9 +5,12 @@ const authorData = require("../data/author.json")
 const usersData = require("../data/users.json");
 const booksData = require("../data/books.json");
 
+//initialisation
+    //connection a la BDD
 const { Client } = require('pg');
 const client = new Client();
 
+//1. importer les livres
 async function insertBooks(){
     const tableName = "book";
 
@@ -21,6 +24,7 @@ async function insertBooks(){
     }    
 };
 
+//2. importer les utilisateurs
 async function insertUsers(){
     const tableName = "users";
 
@@ -34,6 +38,8 @@ async function insertUsers(){
     }    
 };
 
+
+//3. importer les auteurs
 async function insertAuthor(){
     const tableName = "author";
 
@@ -47,6 +53,8 @@ async function insertAuthor(){
     }    
 };
 
+
+//4. importer les categories
 async function insertCategory(){
     const tableName = "category";
 
