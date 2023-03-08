@@ -33,7 +33,7 @@ const userController = {
         try {
             const user = await dataMapper.users.insertUser({ pseudo, email, password : encryptedPassword });
             console.log(user);
-            return res.json(user);
+            return res.json();
             }
          catch (err) {
             return res.status(500).json();
