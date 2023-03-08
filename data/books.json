@@ -1,5 +1,5 @@
 [
-{
+  {
     "id": 1,
     "title": "1984",
     "author": 1,
@@ -78,5 +78,85 @@
     "category": 7,
     "description": "The story of a sailor's obsession with a giant white whale.",
     "img": "https://m.media-amazon.com/images/I/41VnFKC9srL._SX346_BO1,204,203,200_.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Vingt mille lieues sous les mers",
+    "author": 11,
+    "category": 7,
+    "description": "L'apparition d'une bête monstrueuse en 1866 dans plusieurs mers du globe défraie la chronique.",
+    "img": "https://m.media-amazon.com/images/I/91d0MPVV0qL.jpg"
+  },
+  {
+    "id": 12,
+    "title": "La Guerre des mondes",
+    "author": 12,
+    "category": 1,
+    "description": "1894. Des astronomes sont témoins d'étranges activités à la surface de Mars, comme des éclairs ou des explosions de gaz incandescent.",
+    "img": "https://m.media-amazon.com/images/I/71x3rwTkF1L.jpg"
+  },
+  {
+    "id": 13,
+    "title": "La Horde du Contrevent",
+    "author": 13,
+    "category": 1,
+    "description": "Ils sont vingt-trois, forment la trente-quatrième Horde du Contrevent et ont entre vingt-sept et quarante-trois ans. Dans un monde balayé par les vents, ils ont été formés depuis l'enfance dans un seul but : parcourir le monde",
+    "img": "https://m.media-amazon.com/images/I/814U8H+bKHL.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Batman: The Dark Knight Returns",
+    "author": 14,
+    "category": 8,
+    "description": "Des années après avoir pris une retraite forcée, Bruce Wayne est devenu un quinquagénaire aigri et porté sur l'alcool. Mais la plongée de Gotham City dans le crime et le désespoir va le pousser à redevenir le justicier Batman. Traqué par la police et le gouvernement, le Chevalier Noir va mener sa dernière horde sauvage.",
+    "img": "https://m.media-amazon.com/images/I/41wkzapzlNL._SX326_BO1,204,203,200_.jpg"
+  },
+  {
+    "id": 15,
+    "title": "V pour Vendetta",
+    "author": 15,
+    "category": 8,
+    "description": "1997, une Angleterre qui aurait pu exister... Dirigé par un gouvernement fasciste, le pays a sombré dans la paranoïa et la surveillance à outrance. Les « ennemis politiques » sont invariablement envoyés dans des camps et la terreur règne en maître. Mais un homme a décidé de se dresser contre l'oppression. Dissimulé derrière un masque au sourire énigmatique, il répond au nom de V : V pour Vérité, V pour Valeurs... V pour Vendetta !",
+    "img": "https://m.media-amazon.com/images/I/71ihimelAGL.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Gone Girl",
+    "author": 16,
+    "category": 6,
+    "description": "Amy et Nick forment en apparence un couple modèle. Victimes de la crise financière, ils ont quitté Manhattan pour s'installer dans le Missouri. Un jour, Amy disparaît et leur maison est saccagée.",
+    "img": "https://m.media-amazon.com/images/I/41io6z2h3xL.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Shutter Island",
+    "author": 17,
+    "category": 9,
+    "description": "L'histoire se passe en 1954 sur l'île de Shutter Island, dans un hôpital psychiatrique abritant des patients malades mentaux s'étant rendus coupables d'actes criminels. Les marshals Teddy Daniels et Chuck Aule enquêtent sur la disparition d'une patiente, Rachel Solando1.",
+    "img": "https://m.media-amazon.com/images/I/71f6MWskYDL.jpg"
+  },
+  {
+    "id": 18,
+    "title": "La part des ténèbres",
+    "author": 18,
+    "category": 10,
+    "description": "Depuis des années, Thadeus « Thad » Beaumont, un écrivain américain basé à Ludlow dans le Maine qui s'est sorti d'une longue période d’alcoolisme chronique, connaît un succès d'estime avec ses romans de facture classique mais reste peu connu du grand public, à sa grande déception.",
+    "img": "https://m.media-amazon.com/images/I/51852ZOGIsL.jpg"
+  },
+  {
+    "id": 19,
+    "title": "La nuit des temps",
+    "author": 19,
+    "category": 1,
+    "description": "Des expéditions scientifiques françaises en Antarctique révèlent l'émission d'un signal inattendu provenant de la profondeur des glaces. Une expédition rassemblant de nombreuses nations est organisée afin d’atteindre le point d'émission du signal. Ses membres communiquent grâce à un ordinateur traduisant instantanément leurs paroles.",
+    "img": "https://m.media-amazon.com/images/I/51agfIYIv3L.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Le Petit Prince",
+    "author": 20,
+    "category": 6,
+    "description": "Le narrateur est un aviateur qui, à la suite d'une panne de moteur, a dû se poser en catastrophe dans le désert du Sahara et tente seul de réparer son avion (Antoine de Saint-Exupéry se met en scène lui-même dans son œuvre).",
+    "img": "https://m.media-amazon.com/images/I/71lyHAf7XXL.jpg"
   }
 ]

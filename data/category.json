@@ -26,5 +26,17 @@
     {
         "id": 7,
         "name": "Fiction"
+    },
+    {
+        "id": 8,
+        "name": "Bd"
+    },
+    {
+        "id": 9,
+        "name": "Thriller"
+    },
+    {
+        "id": 10,
+        "name": "Horreur"
     }
 ]

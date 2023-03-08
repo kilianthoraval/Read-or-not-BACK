@@ -44,10 +44,59 @@
         "firstname": "Harper",
         "lastname": "Lee"
     },
-     {
+    {
         "id": 10,
         "firstname": "Herman",
         "lastname": "Melville"
+    },
+    {
+        "id": 11,
+        "firstname": "Jules",
+        "lastname": "Verne"
+    },
+    {
+        "id": 12,
+        "firstname": "H.G",
+        "lastname": "Wells"
+    },
+    {
+        "id": 13,
+        "firstname": "Alain",
+        "lastname": "Damasio"
+    },
+    {
+        "id": 14,
+        "firstname": "Frank",
+        "lastname": "Miller"
+    },
+    {
+        "id": 15,
+        "firstname": "Alan",
+        "lastname": "Moore"
+    },
+    {
+        "id": 16,
+        "firstname": "Gillian",
+        "lastname": "Flynn"
+    },
+    {
+        "id": 17,
+        "firstname": "Dennis",
+        "lastname": "Lehane"
+    },
+    {
+        "id": 18,
+        "firstname": "Stephen",
+        "lastname": "King"
+    },
+    {
+        "id": 19,
+        "firstname": "René",
+        "lastname": "Barjavel"
+    },
+    {
+        "id": 20,
+        "firstname": "Antoine",
+        "lastname": "Saint-exupéry"
     }
-
 ]
