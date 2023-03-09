@@ -47,10 +47,10 @@ const securityService = {
         const user = new User(req.body);
         console.log(user);
         const dbUser = await datamapper.users.getUserByEmail(user.email);
-        // const hasMatchingPassword = await bcrypt.compare(password, user.password);
+        const hasMatchingPassword = await bcrypt.compare(user.password, dbUser.password);
         console.log(dbUser);
         if(dbUser){
-            if(dbUser['password'] == user.password){
+            if(hasMatchingPassword){
                  // Génération du token
                 const token = jwt.sign({username:user.email}, process.env.SESSION_SECRET);
                 console.log("TOKEN : ",token);
