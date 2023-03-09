@@ -27,11 +27,11 @@ const userController = {
      */
     async createUser(req,res) {
         const { pseudo, email, password } = req.body;
-        const encryptedPassword = await bcrypt.hash(password, 10);
+        // const encryptedPassword = await bcrypt.hash(password, 10);
         console.log(pseudo,email,password);
         
         try {
-            const user = await dataMapper.users.insertUser({ pseudo, email, password : encryptedPassword });
+            const user = await dataMapper.users.insertUser({ pseudo, email, password});
             console.log(user);
             return res.json();
             }

@@ -47,7 +47,7 @@ const securityService = {
         const user = new User(req.body);
         console.log(user);
         const dbUser = await datamapper.users.getUserByEmail(user.email);
-        const hasMatchingPassword = await bcrypt.compare(user.password);
+        // const hasMatchingPassword = await bcrypt.compare(password, user.password);
         console.log(dbUser);
         if(dbUser){
             if(hasMatchingPassword){
